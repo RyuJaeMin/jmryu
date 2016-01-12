@@ -3,10 +3,14 @@ Router.route('/spaceWt', 'spaceWt');
 Template.spaceWt.events({
     //4
     "click #cancel": function(e, tmpl) {
-
+        var q = confirm('글작성을 취소하시겠습니까?')
+        if(q==true){
         $('#작성자').val('');
         $('#제목').val('');
         $('#본문').val('');
+
+        Router.go('/space');
+        }
     },
     "click #write": function(e, tmpl) {
 

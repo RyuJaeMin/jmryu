@@ -3,10 +3,13 @@ Router.route('/studyWt', 'studyWt');
 Template.studyWt.events({
     //4
     "click #cancel": function(e, tmpl) {
-
-        $('#작성자').val('');
-        $('#제목').val('');
-        $('#본문').val('');
+        var q = confirm('글작성을 취소하시겠습니까?')
+        if(q==true) {
+            $('#작성자').val('');
+            $('#제목').val('');
+            $('#본문').val('');
+            Router.go('/study');
+        }
     },
     "click #write": function(e, tmpl) {
 
