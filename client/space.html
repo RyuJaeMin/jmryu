@@ -5,8 +5,8 @@
     <a href="/spaceWt" >
         <button class="btn btn-primary" id="lnk_write">글작성</button>
     </a>
-    <button class="btn btn-info" id="Prev">Prev</button>
-    <button class="btn btn-primary" id="Next">Next</button>
+    <button class="btn btn-info" id="Prev">이전</button>
+    <button class="btn btn-primary" id="Next">다음</button>
     <input type="text" name="search" id="inpSearch"/>
     <button id="btnSearch">검색</button>
     <table class="table table-hover">
@@ -26,7 +26,7 @@
                 <td>{{글번호}}</td>
                 <td>{{작성자}}</td>
                 <td><a href="/spaceD/{{_id}}">{{제목}}</a></td>
-                <td><button class="btn btn-danger" count="{{글번호}}" id="removeOneItem">x</button></td>
+                <td><button class="btn btn-danger" count="{{글번호}}" id="removeOneItem">삭제</button></td>
 
             </tr>
         {{/each}}

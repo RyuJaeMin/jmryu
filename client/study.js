@@ -74,7 +74,8 @@ Template.study.events({
         //console.log(this);
         //var count = $(e.target).attr('count');
         //var obj = Boards.findOne({글번호: parseInt(count)});
-        if(confirm('정말 지우시겠습니까?')) {
+        var ch =prompt('비밀번호를입력하세요.');
+        if( ch == 1103)  {
             Meteor.call('removeStudy', this, function(err, rslt) {
                 if (err) {
                     //성공시 액션
@@ -83,6 +84,9 @@ Template.study.events({
                     //실패시 액션
                 }
             });
+        }
+        else{
+            alert('비밀번호가 틀렸습니다.')
         }
     },
     "click #cancel": function(e, tmpl) {
